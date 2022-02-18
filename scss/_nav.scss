@@ -1,0 +1,104 @@
+nav {
+    .nav-top {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+        color: white;
+
+        > div {
+            padding: 0 1rem;
+        }
+
+        > div:first-child {
+            padding-left: 0;
+        }
+
+        .search-bar {
+            width: 60%;
+            position: relative;
+            .form-control {
+                background-color: #a2a2a3;
+                border: 2px solid white;
+                border-radius: .5rem;
+                color: black;
+                font-style: italic;
+                padding: .75rem;
+            }
+
+            .icon-search {
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                transform: translateY(-50%);
+                color: $primary;
+            }
+        }
+
+        .marketplace {
+            display: flex;
+            align-items: center;
+            img {
+                width: 40px;
+                margin-left: .5rem;
+            }
+        }
+
+        .language {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            position: relative;
+
+            .form-select {
+                background-color: transparent;
+                color: white;
+                border: none;
+                background-image: none;
+                font-size: 1.5rem;
+
+                &:focus {
+                    box-shadow: none;
+                    border: none;
+                }
+            }
+
+            .icon-select {
+                font-size: 1rem;
+                position: absolute;
+                right: 2rem;
+            }
+        }
+    }
+
+    .navigation {
+        background-color: $primary;
+        color: white;
+        margin-bottom: 1rem;
+
+        .col-12 {
+            display: flex;
+            align-items: center;
+            .kategori {
+                min-width: 25%;
+                padding-left: 2rem;
+            }
+            ul {
+                display: flex;
+                li {
+                    padding: .75rem 1.5rem;
+                    border-left: 2px solid white;
+                    transform: skewX(-10deg);
+
+                    span {
+                        display: block;
+                        transform: skewX(10deg);
+                    }
+
+                    &.active, &:hover {
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}

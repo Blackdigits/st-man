@@ -1,0 +1,33 @@
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    &.white {
+        color: white;
+
+        .title:after {
+            background-color: white;
+        }
+    }
+    .title {
+        text-align: center;
+        display: inline-flex;
+        padding-bottom: .5rem;
+        position: relative;
+        font-weight: bold;
+        font-size: 2rem;
+
+        &:after {
+            content: '';
+            width: 50%;
+            height: 3px;
+            border-radius: 1rem;
+            background-color: black;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute
+        }
+    }
+}
