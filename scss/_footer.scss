@@ -2,7 +2,7 @@ footer{
     background-color: black;
     color: white;
     .newsletter {
-        padding: 2rem 0;
+        padding: 2rem 1rem;
         font-size: 2rem;
 
         .form-groups {
@@ -27,6 +27,19 @@ footer{
                 font-style: italic;
             }
         }
+
+        @include breakpoint(untilTablet) {
+            font-size: 1.5rem;
+
+            .form-groups {
+                .form-control {
+                    padding: .5rem 1rem;
+                }
+                .form-control, .button {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 
     .footer-bottom {
@@ -43,6 +56,21 @@ footer{
             text-align: end;
             img {
                 width: 85%;
+            }
+        }
+
+        @include breakpoint(untilTablet) {
+            .footer-content .item {
+                margin-bottom: 1.5rem;
+            }
+            .item {
+                img {
+                    width: 50% !important;
+                }
+            }
+            .footer-image {
+                position: relative;
+                margin-top: 1.5rem;
             }
         }
     }

@@ -5,9 +5,11 @@
 
     &.white {
         color: white;
+        margin-bottom: 1rem;
 
         .title:after {
             background-color: white;
+            bottom: 0;
         }
     }
     .title {
@@ -34,6 +36,9 @@
 
 .products {
     &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    .product-item {
         margin-bottom: 2rem;
     }
     .product-image {
@@ -84,6 +89,14 @@
                 background-color: #f6aa00;
                 color: black;
                 font-size: .75rem;
+            }
+
+            @include breakpoint(untilTablet) {
+                display: block;
+
+                .detail {
+                    margin-top: 1rem;
+                }
             }
         }
     }

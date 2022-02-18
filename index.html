@@ -7,18 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ST Man Hardware</title>
 
+    <!-- CS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
@@ -39,10 +52,10 @@
                                     <i class="fas fa-search"></i>
                                 </div>
                             </div>
-                            <div class="marketplace">
+                            <a href="#" class="marketplace">
                                 <i>Official <br> Marketplace:</i>
                                 <img src="/images/tokopedia.png" alt="">
-                            </div>
+                            </a>
                             <div class="language">
                                 <div class="icon">
                                     <i class="fas fa-globe"></i>
@@ -55,11 +68,14 @@
                                     <i class="fas fa-chevron-down"></i>
                                 </div>
                             </div>
+                            <a class="hamburger"  data-bs-toggle="offcanvas" href="#menumobile" role="button" aria-controls="menumobile">
+                                <i class="fas fa-bars"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="navigation">
                 <div class="container">
                     <div class="row">
@@ -85,15 +101,76 @@
                                     <li><span>Tentang Kami</span></li>
                                 </a>
                                 <a href="">
-                                    <li><span>Customer Care</span></li>
+                                    <li class="btn-wrapper">
+                                        <span><div class="button button-primary">Customer Care</div></span>
+                                    </li>
                                 </a>
                             </ul>
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
         </nav>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="menumobile"
+            aria-labelledby="menumobileLabel">
+            <div class="offcanvas-header">
+                <div class="offcanvas-logo" id="menumobileLabel">
+                    <img src="/images/logo-nav.png" alt="">
+                </div>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="search-bar">
+                    <input type="text" class="form-control" name="search" id="search"
+                        placeholder="Cari apapun disini..">
+                    <div class="icon-search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <a href="/">
+                            <li><span>Beranda</span></li>
+                        </a>
+                        <a href="">
+                            <li><span>Kegiatan</span></li>
+                        </a>
+                        <a href="">
+                            <li><span>Brands</span></li>
+                        </a>
+                        <a href="">
+                            <li><span>Agen</span></li>
+                        </a>
+                        <a href="">
+                            <li><span>Tentang Kami</span></li>
+                        </a>
+                        <a href="">
+                            <li class="btn-wrapper">
+                                <span><div class="button button-primary">Customer Care</div></span>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <a href="#" class="marketplace">
+                    <i>Official Marketplace:</i>
+                    <img src="/images/tokopedia.png" alt="">
+                </a>
+                <div class="language">
+                    <div class="icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <select class="form-select" name="" id="">
+                        <option>ID</option>
+                        <option>EN</option>
+                    </select>
+                    <div class="icon-select">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="hero">
             <div class="container-fluid">
                 <div class="row">
@@ -116,28 +193,28 @@
         <div class="videos">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-4 video-item">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/EqboAI-Vk-U"
-                                title="YouTube video player" frameborder="0"
+                            <iframe src="https://www.youtube.com/embed/EqboAI-Vk-U" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
 
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-4 video-item">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/EqboAI-Vk-U"
-                                title="YouTube video player" frameborder="0"
+                            <iframe src="https://www.youtube.com/embed/EqboAI-Vk-U" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
 
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-4 video-item">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/EqboAI-Vk-U"
-                                title="YouTube video player" frameborder="0"
+                            <iframe src="https://www.youtube.com/embed/EqboAI-Vk-U" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
 
@@ -160,7 +237,29 @@
                         <div class="title">Brand Kami</div>
                     </div>
                     <div class="col-12">
-    
+                        <div class="slider">
+                            <div>
+                                <img src="/images/brand-1.png" alt="">
+                            </div>
+                            <div>
+                                <img src="/images/brand-2.png" alt="">
+                            </div>
+                            <div>
+                                <img src="/images/brand-3.png" alt="">
+                            </div>
+                            <div>
+                                <img src="/images/brand-4.png" alt="">
+                            </div>
+                            <div>
+                                <img src="/images/brand-5.png" alt="">
+                            </div>
+                            <div>
+                                <img src="/images/brand-1.png" alt="">
+                            </div>
+                            <div>
+                                <img src="/images/brand-2.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -175,7 +274,7 @@
                             Produk Baru
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-6 col-lg-3 product-item">
                         <div class="product-image ">
                             <div class="img-wrapper">
                                 <img src="/images/product-1.png" alt="">
@@ -189,13 +288,13 @@
                                 <div>
                                     HP-ID008
                                 </div>
-                                <a href="#" class="detail">
+                                <a href="/product-detail.html" class="detail">
                                     Lebih Detail >>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-6 col-lg-3 product-item">
                         <div class="product-image">
                             <div class="img-wrapper">
                                 <img src="/images/product-2.png" alt="">
@@ -215,7 +314,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-6 col-lg-3 product-item">
                         <div class="product-image">
                             <div class="img-wrapper">
                                 <img src="/images/product-3.png" alt="">
@@ -235,7 +334,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-6 col-lg-3 product-item">
                         <div class="product-image">
                             <div class="img-wrapper">
                                 <img src="/images/product-4.png" alt="">
@@ -271,7 +370,7 @@
                             Produk Unggulan
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-6 col-lg-3 product-item">
                         <div class="product-image ">
                             <div class="img-wrapper">
                                 <img src="/images/product-1.png" alt="">
@@ -291,7 +390,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-6 col-lg-3 product-item">
                         <div class="product-image">
                             <div class="img-wrapper">
                                 <img src="/images/product-2.png" alt="">
@@ -311,7 +410,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-6 col-lg-3 product-item">
                         <div class="product-image">
                             <div class="img-wrapper">
                                 <img src="/images/product-3.png" alt="">
@@ -331,7 +430,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-6 col-lg-3 product-item">
                         <div class="product-image">
                             <div class="img-wrapper">
                                 <img src="/images/product-4.png" alt="">
@@ -398,7 +497,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-8 newsletter">
+                <div class="col-12 col-lg-8 newsletter">
                     <b>Mau dapat informasi promo & event dari kami</b> <br>
                     <b>Secara langsung dan cepat?</b> <i>Masukkan Email Anda!</i>
 
@@ -414,18 +513,19 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-8 footer-content">
+                    <div class="col-12 col-lg-8 footer-content">
                         <div class="row">
-                            <div class="col-12 col-lg-2">
+                            <div class="col-6 col-lg-2 item">
                                 <img src="/images/logo-footer.png" class="w-100" alt="">
                             </div>
-                            <div class="col-12 col-lg-5">
-                                <b>Alamat:</b> Jl. Laksana 91, 91A, 91B, Kota Matsum IV, Medan Area, Medan, Sumatera Utara, Indonesia
-                                <div>
+                            <div class="col-12 col-lg-5 item">
+                                <b>Alamat:</b> Jl. Laksana 91, 91A, 91B, Kota Matsum IV, Medan Area, Medan, Sumatera
+                                Utara, Indonesia
+                                <a href="#" class="mt-3 d-block">
                                     <b>Follow Us</b>
-                                </div>
+                                </a>
                             </div>
-                            <div class="col-12 col-lg-5">
+                            <div class="col-12 col-lg-5 item">
                                 <div>
                                     <b>Hubungi Kami:</b>
                                     <div class="d-flex align-items-center">
@@ -437,7 +537,7 @@
                                         +62 812 6434 6667
                                     </div>
                                 </div>
-                                <div>
+                                <div class="mt-3">
                                     <b>Email:</b>
                                     <div class="d-flex align-items-center">
                                         <i class="fas fa-envelope me-2"></i>
@@ -447,13 +547,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 footer-image">
+                    <div class="col-12 col-lg-4 footer-image">
                         <img src="/images/footer-image.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 4,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>
