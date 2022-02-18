@@ -1,5 +1,6 @@
 .body-top {
     background-image: url('/images/bg-hero.png');
+    background-size: cover;
     padding-bottom: 2rem;
 
     .hero {
@@ -55,17 +56,18 @@
 
         @include breakpoint(untilTablet) {
             margin-bottom: 2rem;
-           .hero-right {
-            padding-left: 1rem;
+            .hero-right {
+                padding: 3rem 1rem;
+                padding-left: 1rem;
 
-            h1 {
-                font-size: 2.5rem;
-            }
+                h1 {
+                    font-size: 2.5rem;
+                }
 
-            .partner, h5 {
-                font-size: 1rem;
+                .partner, h5 {
+                    font-size: 1rem;
+                }
             }
-           }
          }
     }
 
@@ -145,6 +147,7 @@
             z-index: 5;
             @include breakpoint(untilTablet) {
                 overflow-x: auto;
+                justify-content: start;
             }
 
             .item {

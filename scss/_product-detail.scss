@@ -26,6 +26,17 @@
         .path {
             color: black;
             font-size: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            a {
+                display: block;
+            }
+
+            .icon {
+                margin-right: .5rem;
+            }
             span {
                 color: white;
             }
@@ -39,6 +50,15 @@
             height: 12px;
             background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(179,179,179,1) 31%, rgba(126,126,126,1) 100%);
             width: 100%;
+        }
+
+        @include breakpoint(untilTablet) {
+            padding: 1rem;
+
+            .product-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
         }
     }
 
@@ -54,8 +74,12 @@
             width: 100%;
             mix-blend-mode: exclusion;
         }
+        @include breakpoint(untilTablet) {
+            width: 100%;
+        }
 
         .product {
+            margin-bottom: 2rem;
             .container-fluid {
                 position: relative;
                 padding: 2rem;
@@ -89,7 +113,8 @@
                 .social-share {
                     padding-left: 2rem;
                     p {
-                        margin-bottom: .5rem;
+                        margin-bottom: .75rem;
+                        font-size: 1.25rem;
                     }
                     .items {
                         display: flex;
@@ -98,11 +123,33 @@
                     .item {
                         padding-right: 1rem;
                         text-align: center;
-                        font-size: .75rem;
+                        font-size: .9rem;
     
                         img {
                             margin-bottom: .5rem;
                         }
+                    }
+                }
+
+                @include breakpoint(untilTablet) {
+                    padding: 1rem;
+
+                    .product-text {
+                        padding-left: 0; 
+                        margin-top: 1rem;
+
+                        .product-title {
+                            font-size: 1.75rem;
+                            line-height: normal;
+                        }
+
+                        .product-subtitle, .product-desc {
+                            font-size: 1.25rem;
+                        }
+                    }
+
+                    .social-share {
+                        padding-left: 0;
                     }
                 }
             }

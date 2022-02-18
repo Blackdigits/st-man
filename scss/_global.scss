@@ -53,6 +53,10 @@
         align-items: center;
         border-radius: 4px 4px 0 0;
 
+        @include breakpoint(mobileonly){
+            height: 160px;
+        }
+
         .img-wrapper {
             width: 80%;
         }

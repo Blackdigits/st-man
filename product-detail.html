@@ -31,76 +31,137 @@
 <body class="product-detail">
     <div class="body-top">
         <nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="nav-top">
-                            <a href="/" class="nav-logo">
-                                <img src="/images/logo-nav.png" alt="ST MAN Hardware">
-                            </a>
-                            <div class="search-bar">
-                                <input type="text" class="form-control" name="search" id="search"
-                                    placeholder="Cari apapun disini..">
-                                <div class="icon-search">
-                                    <i class="fas fa-search"></i>
-                                </div>
-                            </div>
-                            <a href="#" class="marketplace">
-                                <i>Official <br> Marketplace:</i>
-                                <img src="/images/tokopedia.png" alt="">
-                            </a>
-                            <div class="language">
-                                <div class="icon">
-                                    <i class="fas fa-globe"></i>
-                                </div>
-                                <select class="form-select" name="" id="">
-                                    <option>ID</option>
-                                    <option>EN</option>
-                                </select>
-                                <div class="icon-select">
-                                    <i class="fas fa-chevron-down"></i>
-                                </div>
-                            </div>
-                            <a class="hamburger"  data-bs-toggle="offcanvas" href="#menumobile" role="button" aria-controls="menumobile">
-                                <i class="fas fa-bars"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="navigation">
+            <nav>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="kategori">
-                                <i class="fas fa-bars me-2"></i>
-                                Kategori
+                            <div class="nav-top">
+                                <a href="/" class="nav-logo">
+                                    <img src="/images/logo-nav.png" alt="ST MAN Hardware">
+                                </a>
+                                <div class="search-bar">
+                                    <input type="text" class="form-control" name="search" id="search"
+                                        placeholder="Cari apapun disini..">
+                                    <div class="icon-search">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <a href="#" class="marketplace">
+                                    <i>Official <br> Marketplace:</i>
+                                    <img src="/images/tokopedia.png" alt="">
+                                </a>
+                                <div class="language">
+                                    <div class="icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <select class="form-select" name="" id="">
+                                        <option>ID</option>
+                                        <option>EN</option>
+                                    </select>
+                                    <div class="icon-select">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <a class="hamburger"  data-bs-toggle="offcanvas" href="#menumobile" role="button" aria-controls="menumobile">
+                                    <i class="fas fa-bars"></i>
+                                </a>
                             </div>
-                            <ul>
-                                <a href="/">
-                                    <li><span>Beranda</span></li>
-                                </a>
-                                <a href="">
-                                    <li><span>Kegiatan</span></li>
-                                </a>
-                                <a href="">
-                                    <li><span>Brands</span></li>
-                                </a>
-                                <a href="">
-                                    <li><span>Agen</span></li>
-                                </a>
-                                <a href="">
-                                    <li><span>Tentang Kami</span></li>
-                                </a>
-                                <a href="">
-                                    <li class="btn-wrapper">
-                                        <span><div class="button button-primary">Customer Care</div></span>
-                                    </li>
-                                </a>
-                            </ul>
                         </div>
-
+                    </div>
+                </div>
+    
+                <div class="navigation">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="kategori">
+                                    <i class="fas fa-bars me-2"></i>
+                                    Kategori
+                                </div>
+                                <ul>
+                                    <a href="/">
+                                        <li><span>Beranda</span></li>
+                                    </a>
+                                    <a href="">
+                                        <li><span>Kegiatan</span></li>
+                                    </a>
+                                    <a href="">
+                                        <li><span>Brands</span></li>
+                                    </a>
+                                    <a href="">
+                                        <li><span>Agen</span></li>
+                                    </a>
+                                    <a href="">
+                                        <li><span>Tentang Kami</span></li>
+                                    </a>
+                                    <a href="">
+                                        <li class="btn-wrapper">
+                                            <span><div class="button button-primary">Customer Care</div></span>
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="menumobile"
+                aria-labelledby="menumobileLabel">
+                <div class="offcanvas-header">
+                    <div class="offcanvas-logo" id="menumobileLabel">
+                        <img src="/images/logo-nav.png" alt="">
+                    </div>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="search-bar">
+                        <input type="text" class="form-control" name="search" id="search"
+                            placeholder="Cari apapun disini..">
+                        <div class="icon-search">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <a href="/">
+                                <li><span>Beranda</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Kegiatan</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Brands</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Agen</span></li>
+                            </a>
+                            <a href="">
+                                <li><span>Tentang Kami</span></li>
+                            </a>
+                            <a href="">
+                                <li class="btn-wrapper">
+                                    <span><div class="button button-primary">Customer Care</div></span>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                    <a href="#" class="marketplace">
+                        <i>Official Marketplace:</i>
+                        <img src="/images/tokopedia.png" alt="">
+                    </a>
+                    <div class="language">
+                        <div class="icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <select class="form-select" name="" id="">
+                            <option>ID</option>
+                            <option>EN</option>
+                        </select>
+                        <div class="icon-select">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,8 +179,11 @@
                     <div class="col-12 col-lg-7">
                         <h4>Detail Produk</h4>
                         <div class="path">
-                            <i class="fas fa-home"></i>
-                            Beranda/Produk/Powertools/<span>Hekter Tembak Angin</span>
+                            <div class="icon"><i class="fas fa-home"></i></div>
+                            <a href="#">Beranda/</a>
+                            <a href="#">Produk/</a>
+                            <a href="#">Powertools/</a>
+                            <div><span>Hekter Tembak Angin</span></div>
                         </div>
                     </div>
                 </div>
@@ -187,7 +251,7 @@
                                 Produk Terkait
                             </div>
                         </div>
-                        <div class="col-6 col-lg-3">
+                        <div class="col-6 col-lg-3 product-item">
                             <div class="product-image ">
                                 <div class="img-wrapper">
                                     <img src="/images/product-1.png" alt="">
@@ -201,13 +265,13 @@
                                     <div>
                                         HP-ID008
                                     </div>
-                                    <a href="/product-detail.html" class="detail">
+                                    <a href="#" class="detail">
                                         Lebih Detail >>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-lg-3">
+                        <div class="col-6 col-lg-3 product-item">
                             <div class="product-image">
                                 <div class="img-wrapper">
                                     <img src="/images/product-2.png" alt="">
@@ -227,7 +291,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-lg-3">
+                        <div class="col-6 col-lg-3 product-item">
                             <div class="product-image">
                                 <div class="img-wrapper">
                                     <img src="/images/product-3.png" alt="">
@@ -247,7 +311,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-lg-3">
+                        <div class="col-6 col-lg-3 product-item">
                             <div class="product-image">
                                 <div class="img-wrapper">
                                     <img src="/images/product-4.png" alt="">
