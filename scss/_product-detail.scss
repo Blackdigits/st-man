@@ -1,0 +1,118 @@
+.product-detail {
+    .body-top {
+        padding-bottom: 0;
+    }
+    .detail-header {
+        background-image: url('/images/bg-detail-header.png');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 3rem 2rem;
+        position: relative;
+    
+        .row {
+            align-items: center;
+        }
+    
+        .product-title {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+    
+        h4 {
+            font-weight: bold;
+        }
+    
+        .path {
+            color: black;
+            font-size: 1.25rem;
+            span {
+                color: white;
+            }
+        }
+    
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            height: 12px;
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(179,179,179,1) 31%, rgba(126,126,126,1) 100%);
+            width: 100%;
+        }
+    }
+
+    .detail-body {
+        position: relative;
+        width: 90%;
+        margin: auto;
+        margin-top: 12px;
+        .bg {
+            background-color: rgba($color: white, $alpha: 1);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: exclusion;
+        }
+
+        .product {
+            .container-fluid {
+                position: relative;
+                padding: 2rem;
+    
+                .image {
+                    img {
+                        width: 100%;
+                    }
+                }
+    
+                .product-text {
+                    padding-left: 2rem;
+                    margin-bottom: 2rem;
+                    .product-title {
+                        font-size: 2rem;
+                        line-height: 2.5rem;
+                        font-weight: bold;
+                        margin-bottom: 1rem;
+                    }
+    
+                    .product-subtitle {
+                        font-size: 1.5rem;
+                        margin-bottom: 1.5rem;
+                    }
+    
+                    .product-desc {
+                        font-size: 1.5rem;
+                    }
+                }
+    
+                .social-share {
+                    padding-left: 2rem;
+                    p {
+                        margin-bottom: .5rem;
+                    }
+                    .items {
+                        display: flex;
+                    }
+    
+                    .item {
+                        padding-right: 1rem;
+                        text-align: center;
+                        font-size: .75rem;
+    
+                        img {
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .products {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+    }
+
+    
+}

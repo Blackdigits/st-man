@@ -31,3 +31,60 @@
         }
     }
 }
+
+.products {
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    .product-image {
+        background-color: #cacbcb;
+        box-shadow: 0px 0px 10px 4px #cacbcb; /* change to alter the effect*/
+        padding: 1rem;
+        text-align: center;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px 4px 0 0;
+
+        .img-wrapper {
+            width: 80%;
+        }
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .see-all {
+        margin-top: .5rem;
+        text-align: end;
+    }
+
+    .product-desc {
+        padding: .25rem .75rem;
+        background-color: $secondary;
+        color: white;
+        border-radius: 8px 8px 4px 4px;
+        margin-top: -10px;
+
+        .product-title {
+            font-weight: bold;
+        }
+
+        .product-type {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .detail {
+                padding: .1rem .5rem;
+                background-color: #f6aa00;
+                color: black;
+                font-size: .75rem;
+            }
+        }
+    }
+}
