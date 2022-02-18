@@ -84,9 +84,31 @@
                 position: relative;
                 padding: 2rem;
     
-                .image {
+                .images {
                     img {
                         width: 100%;
+                    }
+                }
+
+                .slick-arrow::before {
+                    color: $primary;
+                }
+
+                .gallery {
+                    margin-top: 1rem;
+                    .item {
+
+                        &.slick-current {
+                            img {
+                                border-color: $primary;
+                            }
+                        }
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            border: 6px solid #dcdddd;
+                            border-radius: 4px;
+                        }
                     }
                 }
     

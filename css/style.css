@@ -859,8 +859,27 @@ nav .navigation .col-12 ul li .button {
   padding: 2rem;
 }
 
-.product-detail .detail-body .product .container-fluid .image img {
+.product-detail .detail-body .product .container-fluid .images img {
   width: 100%;
+}
+
+.product-detail .detail-body .product .container-fluid .slick-arrow::before {
+  color: #ef7a00;
+}
+
+.product-detail .detail-body .product .container-fluid .gallery {
+  margin-top: 1rem;
+}
+
+.product-detail .detail-body .product .container-fluid .gallery .item.slick-current img {
+  border-color: #ef7a00;
+}
+
+.product-detail .detail-body .product .container-fluid .gallery .item img {
+  width: 100px;
+  height: 100px;
+  border: 6px solid #dcdddd;
+  border-radius: 4px;
 }
 
 .product-detail .detail-body .product .container-fluid .product-text {
