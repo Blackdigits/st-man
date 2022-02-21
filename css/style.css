@@ -237,7 +237,6 @@
   background-position: center;
   color: white;
   padding: 3rem;
-  position: relative;
 }
 
 .detail-header .row {
@@ -280,17 +279,6 @@
   color: white;
 }
 
-.detail-header:after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  height: 12px;
-  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(31%, #b3b3b3), to(#7e7e7e));
-  background: linear-gradient(90deg, black 0%, #b3b3b3 31%, #7e7e7e 100%);
-  width: 100%;
-}
-
 @media (max-width: 60em) {
   .detail-header {
     padding: 1rem;
@@ -299,6 +287,15 @@
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
+}
+
+.detail-header-after {
+  bottom: -12px;
+  left: 0;
+  height: 12px;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(31%, #b3b3b3), to(#7e7e7e));
+  background: linear-gradient(90deg, black 0%, #b3b3b3 31%, #7e7e7e 100%);
+  width: 100%;
 }
 
 footer {
