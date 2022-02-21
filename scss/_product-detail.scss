@@ -2,65 +2,6 @@
     .body-top {
         padding-bottom: 0;
     }
-    .detail-header {
-        background-image: url('/images/bg-detail-header.png');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 3rem;
-        position: relative;
-    
-        .row {
-            align-items: center;
-        }
-    
-        .product-title {
-            font-weight: bold;
-            font-size: 2rem;
-        }
-    
-        h4 {
-            font-weight: bold;
-        }
-    
-        .path {
-            color: black;
-            font-size: 1.25rem;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-
-            a {
-                display: block;
-            }
-
-            .icon {
-                margin-right: .5rem;
-            }
-            span {
-                color: white;
-            }
-        }
-    
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
-            height: 12px;
-            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(179,179,179,1) 31%, rgba(126,126,126,1) 100%);
-            width: 100%;
-        }
-
-        @include breakpoint(untilTablet) {
-            padding: 1rem;
-
-            .product-title {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-        }
-    }
 
     .detail-body {
         position: relative;

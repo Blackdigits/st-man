@@ -41,33 +41,100 @@ nav {
             align-items: center;
             justify-content: space-between;
             .kategori {
-                min-width: 25%;
+                min-width: 30%;
                 cursor: pointer;
-            }
-            ul {
                 display: flex;
                 align-items: center;
-                li {
+                height: 100%;
+
+                .dropdown > .dropdown-menu {
+                    transform: translate(-22px, 38px) !important;
+                    min-width: 20rem;
+
+                    .dropdown-menu {
+                        min-width: 0;
+                        .dropdown-item {
+                            text-align: center;
+                            padding: .5rem 1rem;
+                            img {
+                                height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .dropdown-menu {
+                background-color: rgba($color: $primary, $alpha: 0.9);
+                border-radius: 0;
+                padding: 0;
+                z-index: 8;
+
+                .dropdown-item {
+                    font-weight: 500;
+                    color: white;
+                    padding: .75rem 1rem;
+
+                    &:hover, &:focus {
+                        background-color: $primary
+                    }
+                }
+            }
+
+           
+            ul.menu {
+                display: flex;
+                align-items: center;
+                li.menu-item {
                     padding: .75rem 1.5rem;
                     border-left: 2px solid white;
                     transform: skewX(-10deg);
 
-                    span {
+                    span, .dropdown-toggle {
                         display: block;
                         transform: skewX(10deg);
+                    }
+
+                    > .dropdown-menu.show {
+                        transform: translate(-88px, 47px) skew(10deg) !important;
+                        display: flex;
+                        flex-wrap: wrap;
+                        min-width: 20rem;
+                        > li {
+                            width: 33%;
+                            text-align: center;
+
+                            a {
+                                font-weight: 400;
+                                font-size: .85rem;
+                            }
+
+                            img {
+                                height: 50px;
+                                margin-bottom: .25rem;
+                            }
+
+                            .dropdown-menu {
+                                .dropdown-item {
+                                    color: black;
+                                    font-weight: 500;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
                     }
 
                     &.active, &:hover {
                         background-color: black;
                     }
+                }
 
-                    &.btn-wrapper {
-                        padding: .5rem 1rem;
-                        height: 100%;
+                li.btn-wrapper {
+                    padding: .5rem 1rem;
+                    height: 100%;
 
-                        &:hover {
-                            background-color: $primary;
-                        }
+                    &:hover {
+                        background-color: $primary;
                     }
 
                     .button {
