@@ -66,6 +66,9 @@
             position: relative;
 
             .products {
+                .product-image {
+                    background-color: white;
+                }
                 .product-desc {
                     background-image: url('/images/product-title-bg.png');
 

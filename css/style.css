@@ -1099,6 +1099,10 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
   position: relative;
 }
 
+.products .detail-body .content .products .product-image {
+  background-color: white;
+}
+
 .products .detail-body .content .products .product-desc {
   background-image: url("/images/product-title-bg.png");
 }
