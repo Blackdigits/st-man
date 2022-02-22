@@ -127,7 +127,7 @@
                                                 <img src="/images/brand-2.png" alt="">
                                                 <div>Hyper</div>
                                             </a>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownSubMenuLink">
+                                            <ul class="dropdown-menu submenu" aria-labelledby="dropdownSubMenuLink">
                                                 <li><a class="dropdown-item" href="#">Power Tools</a></li>
                                                 <li><a class="dropdown-item" href="#">Cordless Tools</a></li>
                                                 <li><a class="dropdown-item" href="#">Accessories</a></li>
@@ -254,7 +254,50 @@
                     <li><span>Kegiatan</span></li>
                 </a>
                 <a href="">
-                    <li><span>Brands</span></li>
+                    <li><a data-bs-toggle="collapse" href="#brandmenu" aria-expanded="false"
+                            aria-controls="brandmenu">Brands <i class="fas fa-chevron-down fa-sm  "></i></a></li>
+                    <div class="collapse" id="brandmenu">
+                        <ul class="submenu">
+                            <li class="item">
+                                <a data-bs-toggle="collapse" href="#submenu1" aria-expanded="false"
+                                    aria-controls="coolfixsubmenu">
+                                    <img src="/images/brand-1.png" alt="">
+                                    <div>Coolfix <i class="fas fa-chevron-down fa-sm  "></i></div>
+                                </a>
+                            </li>
+                            <div class="collapse" id="submenu1">
+                                <ul class="submenu2">
+                                    <li><a class="submenu-item" href="#">Power Tools</a></li>
+                                    <li><a class="submenu-item" href="#">Cordless Tools</a></li>
+                                    <li><a class="submenu-item" href="#">Accessories</a></li>
+                                    <li><a class="submenu-item" href="#">Air Tools</a></li>
+                                    <li><a class="submenu-item" href="#">Hand tools</a></li>
+                                    <li><a class="submenu-item" href="#">Measuring tools</a></li>
+                                    <li><a class="submenu-item" href="#">Safety products</a></li>
+                                    <li><a class="submenu-item" href="#">Garden tools</a></li>
+                                </ul>
+                            </div>
+                            <li class="item">
+                                <a data-bs-toggle="collapse" href="#submenu2" aria-expanded="false"
+                                    aria-controls="coolfixsubmenu">
+                                    <img src="/images/brand-2.png" alt="">
+                                    <div>Hyper <i class="fas fa-chevron-down fa-sm  "></i></div>
+                                </a>
+                            </li>
+                            <div class="collapse" id="submenu2">
+                                <ul class="submenu2">
+                                    <li><a class="submenu-item" href="#">Power Tools</a></li>
+                                    <li><a class="submenu-item" href="#">Cordless Tools</a></li>
+                                    <li><a class="submenu-item" href="#">Accessories</a></li>
+                                    <li><a class="submenu-item" href="#">Air Tools</a></li>
+                                    <li><a class="submenu-item" href="#">Hand tools</a></li>
+                                    <li><a class="submenu-item" href="#">Measuring tools</a></li>
+                                    <li><a class="submenu-item" href="#">Safety products</a></li>
+                                    <li><a class="submenu-item" href="#">Garden tools</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
                 </a>
                 <a href="">
                     <li><span>Agen</span></li>
@@ -289,3 +332,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    if ($(window).width() < 992) {
+        $('.dropdown-menu a').click(function (e) {
+            if ($(this).attr('href') == '#')
+                e.preventDefault();
+            if ($(this).next('.submenu').length) {
+                $(this).next('.submenu').toggle();
+            }
+            $('.dropdown').on('hide.bs.dropdown', function () {
+                $(this).find('.submenu').hide();
+            })
+        });
+    }
+</script>

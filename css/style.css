@@ -711,6 +711,38 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
   padding: .25rem 1rem;
 }
 
+.offcanvas .menu ul .collapse {
+  border-top: 1px solid #ef7a00;
+}
+
+.offcanvas .menu ul .collapse.show {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+.offcanvas .menu ul .submenu {
+  padding-left: 1rem;
+}
+
+.offcanvas .menu ul .submenu .item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offcanvas .menu ul .submenu .item a img {
+  height: 50px;
+  margin-right: .5rem;
+}
+
+.offcanvas .menu ul .submenu .submenu2 {
+  padding-left: 1rem;
+}
+
 .body-top {
   background-image: url("/images/bg-hero.png");
   background-size: cover;
