@@ -650,6 +650,51 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
   color: white;
 }
 
+.offcanvas .kategori-mobile {
+  background-color: #ef7a00;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-bottom: 1rem;
+}
+
+.offcanvas .kategori-mobile .collapse {
+  border-top: 1px solid #ef7a00;
+}
+
+.offcanvas .kategori-mobile .collapse.show {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
+.offcanvas .kategori-mobile ul li {
+  padding: 1rem;
+}
+
+.offcanvas .kategori-mobile ul .submenu {
+  padding-left: 1rem;
+}
+
+.offcanvas .kategori-mobile ul .submenu .item {
+  padding: 1rem;
+}
+
+.offcanvas .kategori-mobile ul .submenu .submenu2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.offcanvas .kategori-mobile ul .submenu .submenu2 li {
+  width: 32%;
+}
+
+.offcanvas .kategori-mobile ul .submenu .submenu2 li img {
+  width: 100%;
+}
+
 .offcanvas .offcanvas-logo img {
   width: 60%;
 }
@@ -661,6 +706,10 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 
 .offcanvas .search-bar {
   display: block;
+}
+
+.offcanvas .search-bar .icon-search {
+  right: 1rem;
 }
 
 .offcanvas .marketplace, .offcanvas .language {

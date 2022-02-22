@@ -222,6 +222,43 @@ nav {
     background-image: url('/images/bg-hero.png');
     color: white;
 
+    .kategori-mobile {
+        background-color: $primary;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        margin-bottom: 1rem;
+        .collapse {
+            border-top: 1px solid $primary;
+            &.show {
+                border-top: 1px solid rgba($color: white, $alpha: 0.5);
+                transition: .2s all ease;
+            }
+        }
+        ul {
+            li {
+                padding: 1rem;
+            }
+            .submenu {
+                padding-left: 1rem;
+
+                .item {
+                    padding: 1rem;
+                }
+
+                .submenu2 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        width: 32%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .offcanvas-logo {
         img {
             width: 60%;
@@ -235,6 +272,10 @@ nav {
 
     .search-bar {
         display: block;
+
+        .icon-search {
+            right: 1rem;
+        }
     }
 
     .marketplace, .language {
