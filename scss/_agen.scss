@@ -1,0 +1,105 @@
+.agen {
+    .detail-header {
+        background-image: url('../images/agen-header.png');
+    }
+
+    .detail-body {
+        padding-top: 2rem;
+    }
+
+    .agents {
+        margin-bottom: 2rem;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            .search-bar {
+                width: 20%;
+                display: block;
+                .form-control {
+                    padding: .25rem 1rem;
+                }
+                .icon-search {
+                    right: 1rem;
+                }
+
+                @include breakpoint(untilTablet) {
+                    width: 70%;
+                }
+            }
+        }
+        .title {
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: .5rem;
+            }
+        }
+    
+        .table {
+            background-color: #d4d5d5;
+            border-radius: .5rem;
+            border-collapse: collapse;
+            overflow: hidden;
+    
+            tr th {
+                background-color: $primary;
+                color: white;
+                vertical-align: middle;
+                text-align: center;
+            }
+    
+            tr td {
+                padding: 1rem;
+                vertical-align: middle;
+    
+                &.centered {
+                    text-align: center;
+
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+    
+            .link {
+                color: grey;
+                text-decoration: underline;
+            }
+    
+            .icons {
+                text-align: center;
+    
+                a {
+                    margin: 0 .25rem;
+                }
+
+                @include breakpoint(untilTablet) {
+                    img {
+                        margin-bottom: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .body-bottom {
+        display: none;
+    }
+
+    footer {
+        > .container {
+            display: none;
+        }
+
+        .join-agen {
+            display: block;
+        }
+    }
+}

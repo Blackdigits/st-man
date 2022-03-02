@@ -1,0 +1,127 @@
+.customer-care {
+    .bottom-body {
+        display: none;
+    }
+
+    .detail-header {
+        background-image: url('/images/customer-header.png');
+    }
+
+    .container {
+        position: relative;
+
+        .bg {
+            background-color: rgba($color: white, $alpha: 1);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: exclusion;
+            left: 0;
+        }
+        .row {
+            position: relative;
+        }
+        
+        .detail-body {
+            padding: 1rem;
+
+            .maps-content {
+                iframe {
+                    height: 300px;
+                }
+            }
+
+            .customer-contact {
+                margin-bottom: 2rem;
+            }
+
+            @include breakpoint(desktop) {
+                padding-bottom: 4rem;
+                padding: 2rem;
+                .customer-contact {
+                    padding-right: 3rem;
+                    margin-bottom: 0;
+                }
+                
+                .maps-content {
+                    iframe {
+                        height: 600px;
+                    }
+                }
+
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: 1.75rem;
+                margin-bottom: .75rem;
+            }
+
+            .open-hours {
+                .cards {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+
+            .socials {
+                display: flex;
+
+                img {
+                    width: 60px;
+                    margin-right: 1rem;
+                }
+            }
+            
+            .cards {
+                background-color: #d4d5d5;
+                padding: 1rem;
+                border-radius: .5rem;
+                box-shadow: 0 0 6px 6px #d4d5d5;
+                margin-bottom: 1.5rem;
+
+                .cards-section {
+                    margin: -1rem;
+                    padding: 1rem;
+                }
+
+                .cards-section:first-child {
+                    border-bottom: 1px solid white;
+                    padding-bottom: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                .cards-header {
+                    color: $primary;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: .5rem;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        margin-right: .5rem;
+                    }
+                }
+
+                .cards-item {
+                    background-color: #bdbebe;
+                    padding: .5rem .25rem;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.25rem;
+
+                    &:not(:last-child) {
+                        margin-bottom: .5rem;
+                    }
+
+                    img {
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

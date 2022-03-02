@@ -1,0 +1,103 @@
+.tentang-kami {
+    .body-bottom {
+        display: none;
+    }
+
+    .detail-header {
+        background-image: url('/images/about-header.png');
+    }
+    
+    .container {
+        position: relative;
+
+        .bg {
+            background-color: rgba($color: white, $alpha: 1);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: exclusion;
+            left: 0;
+        }
+        .row {
+            position: relative;
+        }
+
+        .detail-body {
+            padding: 1rem 0;
+            @include breakpoint(desktop) {
+                padding: 2rem;
+            }
+
+            .title {
+                font-weight: bold;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .image-lists {
+                position: relative;
+                margin: 0 -2.75rem;
+                margin-bottom: 2rem;
+                padding: 1rem 2rem;
+                align-items: center;
+                .col-6 {
+                    position: relative;
+                    text-align: center;
+                    margin-bottom: 1rem;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #dcdddd;
+                }
+
+                @include breakpoint(desktop) {
+                    padding: 0 2rem;
+
+                    .col-6 {
+                        width: 20% !important;
+                    }
+
+                    &:before {
+                        height: 80%;
+                    }
+                }
+            }
+
+            .visi {
+                background-image: url('/images/visi-bg.png');
+                background-size: cover;
+                margin: 0 -2.75rem;
+                padding: 2rem;
+
+                .title {
+                    margin-bottom: 0;
+                }
+
+                .subtitle {
+                    font-weight: bold;
+                    color: white;
+                }
+
+                ul {
+                    padding-left: 1rem;
+                    li {
+                        text-indent: -10px;
+
+                        &:before {
+                            content: '-';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

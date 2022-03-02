@@ -1,6 +1,8 @@
 .body-top {
     background-image: url('/images/bg-hero.png');
+    background-position: center;
     background-size: cover;
+    background-repeat: repeat-y;
     padding-bottom: 2rem;
 
     .hero {
@@ -9,11 +11,12 @@
             overflow: visible;
           }
         .hero-slide {
-            height:  480px;
+            height: 35vw;
         }
 
         .bg-hero {
             position: absolute;
+            height: 100%;
 
             img {
                 width: 100%;
@@ -170,6 +173,7 @@
     background-image: url('/images/bg-hero.png');
     padding-top: 1rem;
     border-bottom: 8px solid $primary;
+    margin-top: -2px;
 
     .choose-items {
         padding: 1rem 0;
