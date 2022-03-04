@@ -1,5 +1,5 @@
 .body-top {
-    background-image: url('/images/bg-hero.png');
+    background-image: url('/images/background-page.png');
     background-position: center;
     background-size: cover;
     background-repeat: repeat-y;
@@ -71,8 +71,27 @@
 
         @include breakpoint(untilTablet) {
             margin-bottom: 2rem;
+            height: 40vh;
+            
+            .slick-slider {
+                height: 40vh;
+            }
+
+            .hero-slide {
+                height: 40vh;
+            }
+
+            .bg-hero {
+                height: 100%;
+
+                img {
+                    height: 100%;
+                    object-position: right;
+                }
+            }
+
             .hero-right {
-                padding: 3rem 1rem;
+                padding: 1rem;
                 padding-left: 1rem;
 
                 h1 {

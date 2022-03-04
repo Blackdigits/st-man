@@ -74,6 +74,11 @@ nav {
                     color: white;
                     padding: .75rem 1rem;
 
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+
                     &:hover, &:focus {
                         background-color: $primary
                     }
@@ -217,8 +222,23 @@ nav {
 }
 
 @include breakpoint(untilTablet) {
-    .search-bar, .marketplace, .language {
+    .marketplace, .language {
         display: none;
+    }
+
+    .nav-logo {
+        max-width: 50px;
+
+        img {
+            width: 100%;
+        }
+    }
+    .search-bar {
+        padding: 1rem;
+
+        .icon-search {
+            right: 3rem;
+        }
     }
     justify-content: space-between;
     
@@ -235,7 +255,6 @@ nav {
         background-color: $primary;
         margin-left: -1rem;
         margin-right: -1rem;
-        margin-bottom: 1rem;
         .collapse {
             border-top: 1px solid $primary;
             &.show {
@@ -281,6 +300,7 @@ nav {
 
     .search-bar {
         display: block;
+        padding: 0;
 
         .icon-search {
             right: 1rem;
@@ -297,12 +317,18 @@ nav {
     }
 
     .marketplace {
+        padding: 0 1rem;
+        margin-bottom: 0;
         i {
             margin-right: .5rem;
         }
     }
 
     .language {
+        width: 100%;
+        .icon {
+            left: .5rem;
+        }
         .icon-select {
             left: 5rem;
         }
@@ -313,6 +339,8 @@ nav {
         margin-left: -1rem;
         margin-right: -1rem;
         margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        margin-top: -1px;
         ul {
             li {
                 color: white;

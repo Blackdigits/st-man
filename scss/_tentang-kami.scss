@@ -24,8 +24,10 @@
 
         .detail-body {
             padding: 1rem 0;
+            padding-bottom: 0;
             @include breakpoint(desktop) {
                 padding: 2rem;
+                padding-bottom: 0;
             }
 
             .title {

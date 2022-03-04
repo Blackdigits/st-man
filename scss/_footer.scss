@@ -94,16 +94,11 @@ footer{
             .footer-content .item:not(:last-child) {
                 margin-bottom: 1.5rem;
             }
-            .item {
-                img {
-                    width: 50% !important;
-                }
-            }
             .footer-image {
                 margin-top: 1.5rem;
 
                 img {
-                    width: 40%;
+                    width: 50%;
                 }
             }
         }

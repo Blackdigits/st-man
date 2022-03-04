@@ -47,6 +47,12 @@
                             height: 100px;
                             border: 6px solid #dcdddd;
                             border-radius: 4px;
+
+                            @include breakpoint(mobileonly) {
+                                width: 50px;
+                                height: 50px;
+                                border: 3px solid #dcdddd;
+                            }
                         }
                     }
                 }

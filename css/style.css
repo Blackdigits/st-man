@@ -314,6 +314,12 @@
   font-weight: lighter;
 }
 
+@media (max-width: 37.5em) {
+  .detail-header .path {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 60em) {
   .detail-header {
     padding: 1rem;
@@ -437,14 +443,11 @@ footer .footer-bottom .footer-image img {
   footer .footer-bottom .footer-content .item:not(:last-child) {
     margin-bottom: 1.5rem;
   }
-  footer .footer-bottom .item img {
-    width: 50% !important;
-  }
   footer .footer-bottom .footer-image {
     margin-top: 1.5rem;
   }
   footer .footer-bottom .footer-image img {
-    width: 40%;
+    width: 50%;
   }
 }
 
@@ -548,6 +551,12 @@ nav .navigation .col-12 .dropdown-menu .dropdown-item {
   font-weight: 500;
   color: white;
   padding: .75rem 1rem;
+}
+
+nav .navigation .col-12 .dropdown-menu .dropdown-item img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 nav .navigation .col-12 .dropdown-menu .dropdown-item:hover, nav .navigation .col-12 .dropdown-menu .dropdown-item:focus {
@@ -706,8 +715,20 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 }
 
 @media (max-width: 60em) {
-  .search-bar, .marketplace, .language {
+  .marketplace, .language {
     display: none;
+  }
+  .nav-logo {
+    max-width: 50px;
+  }
+  .nav-logo img {
+    width: 100%;
+  }
+  .search-bar {
+    padding: 1rem;
+  }
+  .search-bar .icon-search {
+    right: 3rem;
   }
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -726,7 +747,6 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
   background-color: #ef7a00;
   margin-left: -1rem;
   margin-right: -1rem;
-  margin-bottom: 1rem;
 }
 
 .offcanvas .kategori-mobile .collapse {
@@ -778,6 +798,7 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 
 .offcanvas .search-bar {
   display: block;
+  padding: 0;
 }
 
 .offcanvas .search-bar .icon-search {
@@ -795,8 +816,21 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
   margin-bottom: 1rem;
 }
 
+.offcanvas .marketplace {
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+
 .offcanvas .marketplace i {
   margin-right: .5rem;
+}
+
+.offcanvas .language {
+  width: 100%;
+}
+
+.offcanvas .language .icon {
+  left: .5rem;
 }
 
 .offcanvas .language .icon-select {
@@ -808,6 +842,8 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
   margin-left: -1rem;
   margin-right: -1rem;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  margin-top: -1px;
 }
 
 .offcanvas .menu ul li {
@@ -865,7 +901,7 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 }
 
 .body-top {
-  background-image: url("/images/bg-hero.png");
+  background-image: url("/images/background-page.png");
   background-position: center;
   background-size: cover;
   background-repeat: repeat-y;
@@ -953,9 +989,24 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 @media (max-width: 60em) {
   .body-top .hero {
     margin-bottom: 2rem;
+    height: 40vh;
+  }
+  .body-top .hero .slick-slider {
+    height: 40vh;
+  }
+  .body-top .hero .hero-slide {
+    height: 40vh;
+  }
+  .body-top .hero .bg-hero {
+    height: 100%;
+  }
+  .body-top .hero .bg-hero img {
+    height: 100%;
+    -o-object-position: right;
+       object-position: right;
   }
   .body-top .hero .hero-right {
-    padding: 3rem 1rem;
+    padding: 1rem;
     padding-left: 1rem;
   }
   .body-top .hero .hero-right h1 {
@@ -1157,6 +1208,14 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
   height: 100px;
   border: 6px solid #dcdddd;
   border-radius: 4px;
+}
+
+@media (max-width: 37.5em) {
+  .product-detail .detail-body .product .container-fluid .gallery .item img {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #dcdddd;
+  }
 }
 
 .product-detail .detail-body .product .container-fluid .product-text {
@@ -1405,7 +1464,7 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 }
 
 .agen .agents .table {
-  background-color: #d4d5d5;
+  background-color: white;
   border-radius: .5rem;
   border-collapse: collapse;
   overflow: hidden;
@@ -1489,11 +1548,13 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 
 .tentang-kami .container .detail-body {
   padding: 1rem 0;
+  padding-bottom: 0;
 }
 
 @media (min-width: 80em) {
   .tentang-kami .container .detail-body {
     padding: 2rem;
+    padding-bottom: 0;
   }
 }
 
@@ -1649,11 +1710,11 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 }
 
 .customer-care .container .detail-body .cards {
-  background-color: #d4d5d5;
+  background-color: white;
   padding: 1rem;
   border-radius: .5rem;
-  -webkit-box-shadow: 0 0 6px 6px #d4d5d5;
-          box-shadow: 0 0 6px 6px #d4d5d5;
+  -webkit-box-shadow: 0 0 6px 6px #ebebeb71;
+          box-shadow: 0 0 6px 6px #ebebeb71;
   margin-bottom: 1.5rem;
 }
 

@@ -169,6 +169,10 @@
             color: white;
             font-weight: lighter;
         }
+
+        @include breakpoint(mobileonly) {
+            font-size: 1rem;
+        }
     }
 
 
