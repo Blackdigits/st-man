@@ -827,10 +827,12 @@ nav .navigation .col-12 ul.menu li.btn-wrapper .button {
 
 .offcanvas .language {
   width: 100%;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .offcanvas .language .icon {
-  left: .5rem;
+  left: 0;
 }
 
 .offcanvas .language .icon-select {
