@@ -2,6 +2,30 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <div class="nav-top mobile">
+                    <div class="row align-items-center mb-3">
+                        <div class="col-2">
+                            <div class="nav-logo" id="menumobileLabel">
+                                <img src="/images/logo-nav.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="search-bar mb-0 p-0">
+                                <input type="text" class="form-control" name="search" id="search" placeholder="Cari apapun disini..">
+                                <div class="icon-search">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+            
+                        </div>
+                        <div class="col-2 text-end">
+                            <a class="hamburger" data-bs-toggle="offcanvas" href="#menumobile" role="button"
+                                aria-controls="menumobile">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="nav-top">
                     <a href="/" class="nav-logo">
                         <img src="/images/logo-nav.png" alt="ST MAN Hardware">
@@ -29,10 +53,6 @@
                             <i class="fas fa-caret-down"></i>
                         </div>
                     </div>
-                    <a class="hamburger" data-bs-toggle="offcanvas" href="#menumobile" role="button"
-                        aria-controls="menumobile">
-                        <i class="fas fa-bars"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -205,39 +225,37 @@
 </nav>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="menumobile" aria-labelledby="menumobileLabel">
-    <div class="offcanvas-header">
-        <div class="offcanvas-logo" id="menumobileLabel">
-            <img src="/images/logo-nav.png" alt="">
+    <div class="offcanvas-header p-0">
+        <div class="container-fluid py-3">
+            <div class="row align-items-center mb-3">
+                <div class="col-8">
+                    <div class="search-bar mb-0">
+                        <input type="text" class="form-control" name="search" id="search" placeholder="Cari disini..">
+                        <div class="icon-search">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-2">
+                    <div class="language">
+                        <select class="form-select" name="" id="">
+                            <option>ID</option>
+                            <option>EN</option>
+                        </select>
+                        <div class="icon-select">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 text-center">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+            </div>
         </div>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <div class="row align-items-center">
-            <div class="col-8">
-                <div class="search-bar">
-                    <input type="text" class="form-control" name="search" id="search" placeholder="Cari apapun disini..">
-                    <div class="icon-search">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-4">
-                
-                <div class="language">
-                    <div class="icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <select class="form-select" name="" id="">
-                        <option>ID</option>
-                        <option>EN</option>
-                    </select>
-                    <div class="icon-select">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
         <div class="kategori-mobile">
             <ul>
                 <li>

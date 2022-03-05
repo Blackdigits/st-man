@@ -1,8 +1,4 @@
 .body-top {
-    background-image: url('/images/background-page.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat-y;
     padding-bottom: 2rem;
 
     .hero {
@@ -116,6 +112,10 @@
         @include breakpoint(untilTablet) {
             .video-item {
                 margin-bottom: 1rem;
+
+                &:nth-child(3) {
+                    display: none;
+                }
             }
         }
     }
@@ -181,22 +181,32 @@
     }
 }
 
+body {
+    background-image: url('/images/background-page.png');
+}
+
 .body-mid {
-    background-image: url('/images/bg-body.png');
-    background-position: top;
-    background-size: cover;
-    padding: 2rem 0;
+    position: relative;
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .bg {
+        background-color: rgba($color: white, $alpha: 1);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        mix-blend-mode: exclusion;
+    }
 }
 
 .body-bottom {
-    background-image: url('/images/bg-hero.png');
     padding-top: 1rem;
     border-bottom: 8px solid $primary;
     margin-top: -2px;
 
     .choose-items {
         padding: 1rem 0;
-        background-image: url('/images/bg-choose.png');
         background-size: cover;
         background-position: center;
         .items {

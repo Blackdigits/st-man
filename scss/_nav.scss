@@ -4,7 +4,9 @@ nav {
         align-items: center;
         padding: 1rem 0;
         color: white;
-
+        &.mobile {
+            display: none;
+        }
         > div {
             padding: 0 2rem;
         }
@@ -13,16 +15,45 @@ nav {
             padding-left: 0;
         }
 
-        .hamburger {
-            display: none;
-        }
-
         @include breakpoint(untilTablet) {
             justify-content: space-between;
+            display: none;
+            &.mobile {
+                display: block;
+                > div {
+                    padding: 0;
+                }
+
+                .language {
+                    width: 100%;
+                    padding: 0 !important;
+            
+                    .form-select {
+                        text-align: left;
+                        text-align: -webkit-left;
+                        padding: .25rem;
+                    }
+                    .icon {
+                        left: 0;
+                    }
+                    .icon-select {
+                        left: 2rem;
+                    }
+                }
+
+                .search-bar {
+                    padding: 0;
+                    .form-control {
+                        padding: .5rem .75rem;
+                    }
+                    .icon-search {
+                        right: 1rem;
+                    }
+                }
+            }
             
             .hamburger {
                 font-size: 2rem;
-                display: block;
             }
         }
     }
@@ -223,7 +254,7 @@ nav {
 }
 
 @include breakpoint(untilTablet) {
-    .marketplace, .language {
+    .marketplace {
         display: none;
     }
 
@@ -234,13 +265,6 @@ nav {
             width: 100%;
         }
     }
-    .search-bar {
-        padding: 1rem;
-
-        .icon-search {
-            right: 3rem;
-        }
-    }
     justify-content: space-between;
     
     .hamburger {
@@ -249,23 +273,23 @@ nav {
 }
 
 .offcanvas {
-    background-image: url('/images/bg-hero.png');
+    background-image: url('/images/background-page.png');
     color: white;
 
     .kategori-mobile {
         background-color: $primary;
         margin-left: -1rem;
         margin-right: -1rem;
+
         .collapse {
-            border-top: 1px solid $primary;
             &.show {
-                border-top: 1px solid rgba($color: white, $alpha: 0.5);
                 transition: .2s all ease;
             }
         }
         ul {
             li {
                 padding: 1rem;
+                border-bottom: 1px solid rgba($color: white, $alpha: 0.3);
             }
             .submenu {
                 padding-left: 1rem;
@@ -290,8 +314,12 @@ nav {
 
     .offcanvas-logo {
         img {
-            width: 60%;
+            width: 100%;
         }
+    }
+
+    .offcanvas-body {
+        background-color: $primary;
     }
 
     .btn-close {
@@ -310,7 +338,6 @@ nav {
 
     .marketplace, .language {
         display: flex;
-        margin-bottom: 1rem;
     }
 
     .search-bar {
@@ -319,7 +346,7 @@ nav {
 
     .marketplace {
         padding: 0 1rem;
-        margin-bottom: 0;
+        padding-top: 1rem;
         i {
             margin-right: .5rem;
         }
@@ -327,13 +354,18 @@ nav {
 
     .language {
         width: 100%;
-        margin-bottom: 0;
-        padding: 0;
+        padding: 0 !important;
+
+        .form-select {
+            text-align: left;
+            text-align: -webkit-left;
+            padding: .25rem;
+        }
         .icon {
             left: 0;
         }
         .icon-select {
-            left: 5rem;
+            left: 2rem;
         }
     }
 
@@ -343,11 +375,11 @@ nav {
         margin-right: -1rem;
         margin-bottom: 1rem;
         padding-bottom: 1rem;
-        margin-top: -1px;
         ul {
             li {
                 color: white;
                 padding: 1rem 1rem;
+                border-bottom: 1px solid rgba($color: white, $alpha: 0.3);
 
                 &.btn-wrapper {
                     height: 100%;
@@ -366,9 +398,7 @@ nav {
             }
 
             .collapse {
-                border-top: 1px solid $primary;
                 &.show {
-                    border-top: 1px solid rgba($color: white, $alpha: 0.5);
                     transition: .2s all ease;
                 }
             }
